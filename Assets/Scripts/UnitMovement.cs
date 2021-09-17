@@ -23,7 +23,15 @@ public class UnitMovement : MonoBehaviour
     {
         if (((Vector2)nextPosition - (Vector2)transform.position).magnitude <= toleranceDistance)
         {
+            transform.rotation = waypoints[waypointIndex].rotation;
+
             waypointIndex++;
+            if (waypointIndex >= waypoints.Length)
+            {
+                //TODO Player HP abziehen
+                Destroy(gameObject);
+                return;
+            }
             nextPosition = waypoints[waypointIndex].position;
         }
 
