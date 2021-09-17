@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1054364676698844936}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 4738086858857661108}
   - component: {fileID: 782194794333582079}
   - component: {fileID: 2622996654777702997}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 6224792005043609281}
   - component: {fileID: 6454566370925284810}
   - component: {fileID: 7437253301763244680}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8714188195540963194}
   - component: {fileID: 8709758911882308849}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 8429137469414284454}
   - component: {fileID: 9018884579038940528}
   - component: {fileID: 3854910213459698895}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,7 +378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 27370043885767683}
   - component: {fileID: 7455905193521110578}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 2032876878660585018}
   - component: {fileID: 7647605919508697545}
   - component: {fileID: 842278670303248934}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -543,7 +543,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8904447245571759871}
   - component: {fileID: 5839676705722531684}
-  m_Layer: 6
+  - component: {fileID: 6271925599133628923}
+  m_Layer: 7
   m_Name: Soldier01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -584,3 +585,16 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6271925599133628923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8628770055011366226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7726d9f0fd188c4ab7bd5dbd1c6c1a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toleranceDistance: 0.1

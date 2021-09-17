@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1428841170245007717}
   - component: {fileID: 7874018900599427280}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 9074704849039173267}
   - component: {fileID: 7018965794234585155}
   - component: {fileID: 2597230380294358889}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000454619176897463}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 6762157806007461479}
   - component: {fileID: 383112177545054941}
   - component: {fileID: 9143232532613881518}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 8883967696586136801}
   - component: {fileID: 4758641311289949900}
   - component: {fileID: 5080944989524590697}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -386,7 +386,7 @@ GameObject:
   m_Component:
   - component: {fileID: 313534579190012812}
   - component: {fileID: 5198853607882476348}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Soldier02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -437,7 +437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1118120937305615807}
   - component: {fileID: 8610967228192636220}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -520,7 +520,7 @@ GameObject:
   - component: {fileID: 3511974783967898338}
   - component: {fileID: 8314668985784066574}
   - component: {fileID: 7109980440589390087}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
