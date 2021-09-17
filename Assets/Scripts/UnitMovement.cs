@@ -28,6 +28,7 @@ public class UnitMovement : MonoBehaviour
             if (waveManager.NextPosition(waypointIndex, out Vector3 newPosition, out Quaternion newRotation))
             {
                 //TODO Player HP abziehen
+                waveManager.DecreaseUnitCount();
                 Destroy(gameObject);
                 return;
             }

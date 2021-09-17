@@ -7,8 +7,10 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private Transform[] waypoints = null;
     [SerializeField] private Transform spawn = null;
 
-    private int waveIndex = 0;
     [SerializeField] private Wave[] waveList = null;
+
+    private int unitCount = 0;
+    private int waveIndex = 0;
 
     void Start()
     {
@@ -38,6 +40,7 @@ public class WaveManager : MonoBehaviour
     {
         GameObject unit = Instantiate(unitType, spawn.position, spawn.rotation);
         unit.GetComponent<UnitMovement>().InitalizeUnit(this, waypoints[0].position, waypoints[0].rotation);
+        unitCount++;
     }
 
     public bool NextPosition(int index, out Vector3 nextPosition, out Quaternion nextRotation)
@@ -51,6 +54,24 @@ public class WaveManager : MonoBehaviour
         nextPosition = waypoints[index].position;
         nextRotation = waypoints[index].rotation;
         return false;
+    }
+
+    public void DecreaseUnitCount()
+    {
+        unitCount--;
+
+        if(unitCount <= 0)
+        {
+            waveIndex++;
+
+            if(waveIndex >= waveList.Length)
+            {
+                Debug.Log("Win");
+                return;
+            }
+
+            StartCoroutine(SpawnWave(waveList[waveIndex]));
+        }
     }
 }
 

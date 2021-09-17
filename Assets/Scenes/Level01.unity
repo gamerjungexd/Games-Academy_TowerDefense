@@ -3925,7 +3925,9 @@ MonoBehaviour:
   - {fileID: 1454992221}
   - {fileID: 1930295162}
   spawn: {fileID: 1837781851}
-  waveList: []
+  waveList:
+  - {fileID: 11400000, guid: b5794346ed8b29d4e90ad605411393a3, type: 2}
+  - {fileID: 11400000, guid: 35d6b0b72e0b32f4ca8d64306987fd24, type: 2}
 --- !u!4 &467688132
 Transform:
   m_ObjectHideFlags: 0
