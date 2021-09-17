@@ -543,6 +543,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5480045415357536772}
   - component: {fileID: 4651060649350575595}
+  - component: {fileID: -657376033854626044}
   m_Layer: 7
   m_Name: Soldier04
   m_TagString: Untagged
@@ -584,3 +585,16 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-657376033854626044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6520413340492995224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7726d9f0fd188c4ab7bd5dbd1c6c1a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toleranceDistance: 0.1

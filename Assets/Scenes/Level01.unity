@@ -3898,6 +3898,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 467688132}
+  - component: {fileID: 467688133}
   - component: {fileID: 467688131}
   m_Layer: 0
   m_Name: WaveManager
@@ -3923,9 +3924,8 @@ MonoBehaviour:
   - {fileID: 760076764}
   - {fileID: 1454992221}
   - {fileID: 1930295162}
-  unitType: {fileID: 8628770055011366226, guid: b1ec9d5124ba135459794004db39a389, type: 3}
   spawn: {fileID: 1837781851}
-  spawnDelay: 0.5
+  waveList: []
 --- !u!4 &467688132
 Transform:
   m_ObjectHideFlags: 0
@@ -3940,6 +3940,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &467688133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467688130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e5371fdfa0d1e9429555b918440dfee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &483193381
 GameObject:
   m_ObjectHideFlags: 0

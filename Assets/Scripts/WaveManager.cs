@@ -5,17 +5,15 @@ using UnityEngine;
 public class WaveManager : MonoBehaviour
 {
     [SerializeField] private Transform[] waypoints = null;
-
-    [SerializeField] private GameObject unitType = null;
     [SerializeField] private Transform spawn = null;
 
-    [SerializeField] private float spawnDelay = 0.5f;
+    private int waveIndex = 0;
+    [SerializeField] private Wave[] waveList = null;
 
     void Start()
     {
 
-        StartCoroutine(SpawnWave());
-
+        StartCoroutine(SpawnWave(waveList[waveIndex]));
     }
 
     void Update()
@@ -23,12 +21,16 @@ public class WaveManager : MonoBehaviour
 
     }
 
-    private IEnumerator SpawnWave()
+    private IEnumerator SpawnWave(Wave wave)
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < wave.content.Length; i++)
         {
-            yield return new WaitForSeconds(spawnDelay);
-            SpawnUnit(unitType);
+            for (int j = 0; j < wave.content[i].count; j++)
+            {
+                yield return new WaitForSeconds(wave.content[i].delay);
+                SpawnUnit(wave.content[i].unitType);
+            }
+            yield return new WaitForSeconds(wave.content[i].delayNextWaveContent);
         }
     }
 
