@@ -544,6 +544,7 @@ GameObject:
   - component: {fileID: 8904447245571759871}
   - component: {fileID: 5839676705722531684}
   - component: {fileID: 6271925599133628923}
+  - component: {fileID: 904669560940553619}
   m_Layer: 7
   m_Name: Soldier01
   m_TagString: Untagged
@@ -598,3 +599,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toleranceDistance: 0.1
+--- !u!114 &904669560940553619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8628770055011366226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70d1010687186914f88ce06867805380, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthbar: {fileID: 7455905193521110578}
+  maxHealth: 10

@@ -43,11 +43,16 @@ public class Turret : MonoBehaviour
     public void OnAttack()
     {
         StartCoroutine(ShowAttack());
+        HealthComponent component = targets[0].GetComponent<HealthComponent>();
+        if (component != null)
+        {
+            component.OnDecreaseHealth(damage);
+        }
     }
 
     private IEnumerator ShowAttack()
     {
-        if(attackEffect.Length <= 0)
+        if (attackEffect.Length <= 0)
         {
             yield break;
         }
@@ -66,6 +71,10 @@ public class Turret : MonoBehaviour
         }
     }
 
+    public void RemoveTarget(GameObject obj)
+    {
+        targets.Remove(obj);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
