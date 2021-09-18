@@ -5,6 +5,7 @@ using TMPro;
 
 public class WaveManager : MonoBehaviour
 {
+    [SerializeField] private GameObject gameWinScreen = null;
     [SerializeField] private Transform[] waypoints = null;
     [SerializeField] private Transform spawn = null;
 
@@ -67,7 +68,8 @@ public class WaveManager : MonoBehaviour
 
             if (waveIndex >= waveList.Length)
             {
-                Debug.Log("Win");
+                Time.timeScale = 0f;
+                gameWinScreen.SetActive(true);
                 return;
             }
 
@@ -78,7 +80,7 @@ public class WaveManager : MonoBehaviour
 
     private void SetUIWaveIndex()
     {
-        if(textfieldWaveIndex == null)
+        if (textfieldWaveIndex == null)
         {
             return;
         }

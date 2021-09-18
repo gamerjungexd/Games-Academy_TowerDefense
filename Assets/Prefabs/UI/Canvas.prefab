@@ -120,7 +120,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7559364145025103596}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7550706563895694287}
+        m_TargetAssemblyTypeName: ButtonLoadScene, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7559364145143110993
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +328,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7559364145265314418}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7550706563895694287}
+        m_TargetAssemblyTypeName: ButtonLoadScene, Assembly-CSharp
+        m_MethodName: RestartLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7559364145322447968
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,7 +938,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7559364145630976748}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7550706563895694287}
+        m_TargetAssemblyTypeName: ButtonLoadScene, Assembly-CSharp
+        m_MethodName: NextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7559364145697805168
 GameObject:
   m_ObjectHideFlags: 0
@@ -1437,7 +1473,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7559364145798477363}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7550706563895694287}
+        m_TargetAssemblyTypeName: ButtonLoadScene, Assembly-CSharp
+        m_MethodName: RestartLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7559364145948086505
 GameObject:
   m_ObjectHideFlags: 0
@@ -2252,6 +2300,7 @@ GameObject:
   - component: {fileID: 7559364146739651697}
   - component: {fileID: 7559364146739651698}
   - component: {fileID: 7559364146739651699}
+  - component: {fileID: 7550706563895694287}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2347,6 +2396,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7550706563895694287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7559364146739651692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff7b7c6258d04a749a9f99832a5045f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7559364146892948733
 GameObject:
   m_ObjectHideFlags: 0
@@ -2641,7 +2702,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7559364147002891755}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7550706563895694287}
+        m_TargetAssemblyTypeName: ButtonLoadScene, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7559364147049141373
 GameObject:
   m_ObjectHideFlags: 0

@@ -175,6 +175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4279332067353541655}
   - component: {fileID: 1341130774528071486}
+  - component: {fileID: -3549712634362162817}
   m_Layer: 0
   m_Name: BigCanon01_v01
   m_TagString: Untagged
@@ -211,6 +212,24 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 5.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-3549712634362162817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4400938432839524607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02515dd6cdfca314db5b2b578e20d857, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
+  attackSpeed: 2
+  effectTime: 0.5
+  attackEffect:
+  - {fileID: 4944260507302077716}
+  modelHead: {fileID: 129027577664189987}
 --- !u!1 &4944260507302077716
 GameObject:
   m_ObjectHideFlags: 0

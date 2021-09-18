@@ -6,6 +6,7 @@ using TMPro;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private GameObject gameOverScreen = null;
     [SerializeField] private int maxHealth = 20;
     [SerializeField] private TMP_Text textfieldHealth = null;
 
@@ -36,6 +37,7 @@ public class Player : MonoBehaviour
 
     private void OnDeath()
     {
-        Debug.Log("Game Over!");
+        Time.timeScale = 0f;
+        gameOverScreen.SetActive(true);
     }
 }
