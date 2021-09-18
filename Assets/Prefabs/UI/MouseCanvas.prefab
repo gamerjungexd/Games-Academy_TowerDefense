@@ -385,6 +385,7 @@ GameObject:
   - component: {fileID: 1441126238124589965}
   - component: {fileID: 1441126238124589966}
   - component: {fileID: 1441126238124589967}
+  - component: {fileID: 5269462183373704163}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -493,6 +494,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5269462183373704163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441126238124589961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 060d0cb0783d89a41a8288313ea12dc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretType: {fileID: 6182496378456725575, guid: 47e1d2ffae3fc624380581cd226e51bc, type: 3}
 --- !u!1 &1441126238169136981
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,6 +594,7 @@ GameObject:
   - component: {fileID: 1441126238259453293}
   - component: {fileID: 1441126238259453294}
   - component: {fileID: 1441126238259453295}
+  - component: {fileID: 6253631386150688750}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -688,6 +703,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6253631386150688750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441126238259453290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 060d0cb0783d89a41a8288313ea12dc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretType: {fileID: 4400938432839524607, guid: a75c1979baa251a40a3a304ab97e03b4, type: 3}
 --- !u!1 &1441126238395646750
 GameObject:
   m_ObjectHideFlags: 0
@@ -1513,6 +1541,7 @@ GameObject:
   - component: {fileID: 1441126238994774515}
   - component: {fileID: 1441126238994774524}
   - component: {fileID: 1441126238994774525}
+  - component: {fileID: 5205486343087817725}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1621,6 +1650,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5205486343087817725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441126238994774520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 060d0cb0783d89a41a8288313ea12dc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretType: {fileID: 2227524980436295889, guid: e465202c5c593b74f9206f57c9c79a9d, type: 3}
 --- !u!1 &1441126239040315790
 GameObject:
   m_ObjectHideFlags: 0
