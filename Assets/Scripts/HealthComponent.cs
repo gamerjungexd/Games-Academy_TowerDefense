@@ -8,6 +8,9 @@ public class HealthComponent : MonoBehaviour
     [SerializeField] private Slider healthbar = null;
 
     [SerializeField] private int maxHealth = 10;
+    [SerializeField] private int dropResources = 1;
+
+    [SerializeField] private GameObject resourceObject = null;
 
     private int health = 0;
     private WaveManager waveManager = null;
@@ -52,13 +55,20 @@ public class HealthComponent : MonoBehaviour
         waveManager.DecreaseUnitCount();
 
         RemoveUnitFromTurretTarget();
-       
+        SpawnResources();
+
         Destroy(gameObject);
+    }
+
+    private void SpawnResources()
+    {
+        Resource temp = Instantiate<GameObject>(resourceObject, transform.position, transform.rotation).GetComponent<Resource>();
+        temp.InitalizeResource(dropResources, waveManager.Player);
     }
 
     public void RemoveUnitFromTurretTarget()
     {
-        foreach(Turret turret in attackers)
+        foreach (Turret turret in attackers)
         {
             turret.RemoveTarget(gameObject);
         }

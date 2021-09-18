@@ -598,6 +598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7726d9f0fd188c4ab7bd5dbd1c6c1a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageToPlayer: 1
   toleranceDistance: 0.1
   body:
   - {fileID: 2606233317054231527}
@@ -615,3 +616,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthbar: {fileID: 2047813820463272422}
   maxHealth: 10
+  dropResources: 3
+  resourceObject: {fileID: 8206030664495593090, guid: 502f9106f904c304991cd89fe3c445e8, type: 3}

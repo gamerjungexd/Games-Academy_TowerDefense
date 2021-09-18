@@ -391,6 +391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   typeLevel: 1
+  cost: 25
   damage: 5
   attackSpeed: 1
   effectTime: 0.5

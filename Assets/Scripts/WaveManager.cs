@@ -22,6 +22,8 @@ public class WaveManager : MonoBehaviour
     public Dictionary<TurretType, int> HighestTurretLevel { get => this.highestTurretLevel; }
 
     private Player player = null;
+    public Player Player { get => this.player; }
+
     void Start()
     {
         player = FindObjectOfType<Player>();

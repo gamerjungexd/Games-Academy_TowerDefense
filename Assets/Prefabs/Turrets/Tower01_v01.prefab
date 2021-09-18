@@ -223,13 +223,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02515dd6cdfca314db5b2b578e20d857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modelHead: {fileID: 5624623073517561521}
+  type: 0
+  typeLevel: 0
+  cost: 5
   damage: 2
   attackSpeed: 1
   effectTime: 0.5
   attackEffect:
   - {fileID: 3692346930367741430}
   - {fileID: 8536478737882275951}
+  modelHead: {fileID: 5624623073517561521}
 --- !u!1 &6247871125519428709
 GameObject:
   m_ObjectHideFlags: 0

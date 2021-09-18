@@ -12,6 +12,9 @@ public class Turret : MonoBehaviour
     [SerializeField] private int typeLevel = 0;
     public int TypeLevel { get => this.typeLevel; }
 
+    [SerializeField] private int cost = 1;
+    public int Cost { get => this.cost; }
+
     [Min(0)]
     [SerializeField] private int damage = 2;
 
@@ -57,11 +60,15 @@ public class Turret : MonoBehaviour
     public void OnAttack()
     {
         StartCoroutine(ShowAttack());
-        HealthComponent component = targets[0].GetComponent<HealthComponent>();
-        if (component != null)
+        if (targets[0] != null)
         {
-            component.OnDecreaseHealth(damage);
+            HealthComponent component = targets[0].GetComponent<HealthComponent>();
+            if (component != null)
+            {
+                component.OnDecreaseHealth(damage);
+            }
         }
+
     }
 
     private IEnumerator ShowAttack()

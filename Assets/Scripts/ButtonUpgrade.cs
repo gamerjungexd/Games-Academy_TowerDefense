@@ -21,10 +21,15 @@ public class ButtonUpgrade : MonoBehaviour
     {
         Turret turret = userInput.LastClickedTurret.GetComponent<Turret>();
         GameObject upgradedTurret = waveManager.GetTurretUpgrade(turret.Type, turret.TypeLevel + 1);
+        int cost = upgradedTurret.GetComponent<Turret>().Cost;
 
-        userInput.AddTurret(Instantiate<GameObject>(upgradedTurret, turret.transform.position, turret.transform.rotation));
-        userInput.RemoveTurret(turret.gameObject);
+        if(waveManager.Player.Resource >= cost)
+        {
+            waveManager.Player.EditResources(-cost);
+            userInput.AddTurret(Instantiate<GameObject>(upgradedTurret, turret.transform.position, turret.transform.rotation));
+            userInput.RemoveTurret(turret.gameObject);
 
-        Destroy(turret.gameObject);
+            Destroy(turret.gameObject);
+        }
     }
 }

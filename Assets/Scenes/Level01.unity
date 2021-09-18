@@ -287,6 +287,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &79966275 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7559364145697805174, guid: d415cd583dff27a4781bfe1a7c615778, type: 3}
+  m_PrefabInstance: {fileID: 7559364145278937187}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &115740363
 GameObject:
   m_ObjectHideFlags: 0
@@ -5204,6 +5215,8 @@ MonoBehaviour:
   gameOverScreen: {fileID: 192387126}
   maxHealth: 1
   textfieldHealth: {fileID: 2084856867}
+  textfieldResources: {fileID: 79966275}
+  startResources: 10
 --- !u!4 &1815768888
 Transform:
   m_ObjectHideFlags: 0
