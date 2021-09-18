@@ -12,15 +12,12 @@ public class WaveManager : MonoBehaviour
     private int unitCount = 0;
     private int waveIndex = 0;
 
+    private Player player = null;
     void Start()
     {
+        player = FindObjectOfType<Player>();
 
         StartCoroutine(SpawnWave(waveList[waveIndex]));
-    }
-
-    void Update()
-    {
-
     }
 
     private IEnumerator SpawnWave(Wave wave)
@@ -39,7 +36,7 @@ public class WaveManager : MonoBehaviour
     private void SpawnUnit(GameObject unitType)
     {
         GameObject unit = Instantiate(unitType, spawn.position, Quaternion.identity);
-        unit.GetComponent<UnitMovement>().InitalizeUnit(this, waypoints[0].position, waypoints[0].rotation, spawn.rotation);
+        unit.GetComponent<UnitMovement>().InitalizeUnit(this, player, waypoints[0].position, waypoints[0].rotation, spawn.rotation);
         unitCount++;
     }
 
@@ -60,11 +57,11 @@ public class WaveManager : MonoBehaviour
     {
         unitCount--;
 
-        if(unitCount <= 0)
+        if (unitCount <= 0)
         {
             waveIndex++;
 
-            if(waveIndex >= waveList.Length)
+            if (waveIndex >= waveList.Length)
             {
                 Debug.Log("Win");
                 return;

@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class UnitMovement : MonoBehaviour
 {
+    [SerializeField] private int damageToPlayer = 1;
     [SerializeField] private float toleranceDistance = 0.1f;
 
     [SerializeField] private GameObject[] body = null;
@@ -13,6 +14,7 @@ public class UnitMovement : MonoBehaviour
     private Vector3 nextPosition;
     private Quaternion nextRotation;
     private WaveManager waveManager = null;
+    private Player player;
     private CharacterController characterController = null;
 
     void Start()
@@ -28,7 +30,11 @@ public class UnitMovement : MonoBehaviour
             waypointIndex++;
             if (waveManager.NextPosition(waypointIndex, out Vector3 newPosition, out Quaternion newRotation))
             {
-                //TODO Player HP abziehen
+                if (player != null)
+                {
+                    player.OnDecreaseHealth(damageToPlayer);
+                }
+
                 waveManager.DecreaseUnitCount();
                 Destroy(gameObject);
                 return;
@@ -44,9 +50,10 @@ public class UnitMovement : MonoBehaviour
         characterController.Move(direction);
     }
 
-    public void InitalizeUnit(WaveManager waveManager, Vector3 nextPosition, Quaternion nextRotation, Quaternion spawnRotation)
+    public void InitalizeUnit(WaveManager waveManager, Player player, Vector3 nextPosition, Quaternion nextRotation, Quaternion spawnRotation)
     {
         this.waveManager = waveManager;
+        this.player = player;
         this.nextPosition = nextPosition;
         this.nextRotation = nextRotation;
 
