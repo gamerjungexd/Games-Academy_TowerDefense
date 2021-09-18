@@ -13,8 +13,13 @@ public class WaveManager : MonoBehaviour
 
     [SerializeField] private TMP_Text textfieldWaveIndex = null;
 
+    [SerializeField] private GameObject[] turretUpgrades = null;
+
     private int unitCount = 0;
     private int waveIndex = 0;
+
+    private Dictionary<TurretType, int> highestTurretLevel = new Dictionary<TurretType, int>();
+    public Dictionary<TurretType, int> HighestTurretLevel { get => this.highestTurretLevel; }
 
     private Player player = null;
     void Start()
@@ -22,6 +27,8 @@ public class WaveManager : MonoBehaviour
         player = FindObjectOfType<Player>();
 
         SetUIWaveIndex();
+        InitHighestUpgradeLevel();
+
         StartCoroutine(SpawnWave(waveList[waveIndex]));
     }
 
@@ -86,6 +93,39 @@ public class WaveManager : MonoBehaviour
         }
 
         textfieldWaveIndex.text = "" + (waveIndex + 1);
+    }
+
+    public GameObject GetTurretUpgrade(TurretType type, int value)
+    {
+        foreach (GameObject upgrades in turretUpgrades)
+        {
+            Turret turret = upgrades.GetComponent<Turret>();
+            if (turret.Type == type && turret.TypeLevel == value)
+            {
+                return upgrades;
+            }
+        }
+
+        return null;
+    }
+
+    private void InitHighestUpgradeLevel()
+    {
+        foreach (GameObject upgrades in turretUpgrades)
+        {
+            Turret turret = upgrades.GetComponent<Turret>();
+            if (!highestTurretLevel.ContainsKey(turret.Type))
+            {
+                highestTurretLevel.Add(turret.Type, turret.TypeLevel);
+            }
+            else
+            {
+                if (highestTurretLevel[turret.Type] < turret.TypeLevel)
+                {
+                    highestTurretLevel[turret.Type] = turret.TypeLevel;
+                }
+            }
+        }
     }
 }
 

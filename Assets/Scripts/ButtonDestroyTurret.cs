@@ -16,6 +16,7 @@ public class ButtonDestroyTurret : MonoBehaviour
 
     public void DestroyTurret()
     {
+        userInput.RemoveTurret(userInput.LastClickedTurret);
         Destroy(userInput.LastClickedTurret);
     }
 }

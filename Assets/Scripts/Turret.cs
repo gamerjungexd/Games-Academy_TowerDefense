@@ -6,6 +6,12 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
 
+    [SerializeField] private TurretType type = 0;
+    public TurretType Type { get => this.type; }
+
+    [SerializeField] private int typeLevel = 0;
+    public int TypeLevel { get => this.typeLevel; }
+
     [Min(0)]
     [SerializeField] private int damage = 2;
 

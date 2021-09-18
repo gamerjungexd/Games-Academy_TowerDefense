@@ -82,15 +82,15 @@ public class UserInput : MonoBehaviour
                 mouseCanvas.transform.position = worldPos;
                 Turret turret = obj.GetComponent<Turret>();
 
-                //if (turret.TypeLevel < waveManager.HighestTurretLevel[turret.Type])
-                //{
-                //    animator.SetTrigger("OpenUpgrade");
-                //}
-                //else
-                //{
-                //    animator.SetTrigger("OpenMax");
-                //}
-                //break;
+                if (turret.TypeLevel < waveManager.HighestTurretLevel[turret.Type])
+                {
+                    animator.SetTrigger("OpenUpgrade");
+                }
+                else
+                {
+                    animator.SetTrigger("OpenMax");
+                }
+                break;
             }
         }
 

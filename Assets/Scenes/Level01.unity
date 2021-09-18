@@ -3940,6 +3940,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b5794346ed8b29d4e90ad605411393a3, type: 2}
   - {fileID: 11400000, guid: 35d6b0b72e0b32f4ca8d64306987fd24, type: 2}
   textfieldWaveIndex: {fileID: 2037053281}
+  turretUpgrades:
+  - {fileID: 6182496378456725575, guid: 47e1d2ffae3fc624380581cd226e51bc, type: 3}
+  - {fileID: 4400938432839524607, guid: a75c1979baa251a40a3a304ab97e03b4, type: 3}
+  - {fileID: 7268435435618334641, guid: 885e95acaef5ce346938155366dd3e4a, type: 3}
 --- !u!4 &467688132
 Transform:
   m_ObjectHideFlags: 0
