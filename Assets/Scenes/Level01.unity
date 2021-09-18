@@ -3993,6 +3993,7 @@ MonoBehaviour:
   waveList:
   - {fileID: 11400000, guid: b5794346ed8b29d4e90ad605411393a3, type: 2}
   - {fileID: 11400000, guid: 35d6b0b72e0b32f4ca8d64306987fd24, type: 2}
+  textfieldWaveIndex: {fileID: 2037053281}
 --- !u!4 &467688132
 Transform:
   m_ObjectHideFlags: 0
@@ -5467,6 +5468,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2037053281 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7559364147049141315, guid: d415cd583dff27a4781bfe1a7c615778, type: 3}
+  m_PrefabInstance: {fileID: 7559364145278937187}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2053501152
 GameObject:
   m_ObjectHideFlags: 0

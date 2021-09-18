@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class WaveManager : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private Transform spawn = null;
 
     [SerializeField] private Wave[] waveList = null;
+
+    [SerializeField] private TMP_Text textfieldWaveIndex = null;
 
     private int unitCount = 0;
     private int waveIndex = 0;
@@ -17,6 +20,7 @@ public class WaveManager : MonoBehaviour
     {
         player = FindObjectOfType<Player>();
 
+        SetUIWaveIndex();
         StartCoroutine(SpawnWave(waveList[waveIndex]));
     }
 
@@ -67,8 +71,19 @@ public class WaveManager : MonoBehaviour
                 return;
             }
 
+            SetUIWaveIndex();
             StartCoroutine(SpawnWave(waveList[waveIndex]));
         }
+    }
+
+    private void SetUIWaveIndex()
+    {
+        if(textfieldWaveIndex == null)
+        {
+            return;
+        }
+
+        textfieldWaveIndex.text = "" + (waveIndex + 1);
     }
 }
 
