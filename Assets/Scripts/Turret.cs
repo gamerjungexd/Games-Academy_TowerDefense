@@ -2,15 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SphereCollider))]
 public class Turret : MonoBehaviour
 {
-    [SerializeField] private Transform modelHead = null;
 
+    [Min(0)]
     [SerializeField] private int damage = 2;
+
+    [Tooltip("How long should the turret wait between the attacks in seconds.\n[Min 0f]")]
+    [Min(0f)]
     [SerializeField] private float attackSpeed = 1f;
 
+    [Space(10f)]
     [SerializeField] private float effectTime = 0.5f;
     [SerializeField] private GameObject[] attackEffect = null;
+
+    [Header("Model:")]
+    [SerializeField] private Transform modelHead = null;
 
     private int indexAttackEffect = 0;
     private List<GameObject> targets = new List<GameObject>();

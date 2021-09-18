@@ -10,11 +10,17 @@ public class HealthComponent : MonoBehaviour
     [SerializeField] private int maxHealth = 10;
 
     private int health = 0;
+    private WaveManager waveManager = null;
     private List<Turret> attackers = new List<Turret>();
 
     void Awake()
     {
         health = maxHealth;
+    }
+
+    private void Start()
+    {
+        waveManager = FindObjectOfType<WaveManager>();
     }
 
     public void OnDecreaseHealth(int value)
@@ -43,6 +49,8 @@ public class HealthComponent : MonoBehaviour
 
     private void OnDeath()
     {
+        waveManager.DecreaseUnitCount();
+
         RemoveUnitFromTurretTarget();
        
         Destroy(gameObject);

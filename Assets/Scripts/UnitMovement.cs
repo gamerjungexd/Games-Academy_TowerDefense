@@ -7,6 +7,8 @@ public class UnitMovement : MonoBehaviour
 {
     [SerializeField] private float toleranceDistance = 0.1f;
 
+    [SerializeField] private GameObject[] body = null;
+
     private int waypointIndex = 0;
     private Vector3 nextPosition;
     private Quaternion nextRotation;
@@ -22,7 +24,6 @@ public class UnitMovement : MonoBehaviour
     {
         if (((Vector2)nextPosition - (Vector2)transform.position).magnitude <= toleranceDistance)
         {
-            transform.rotation = nextRotation;
 
             waypointIndex++;
             if (waveManager.NextPosition(waypointIndex, out Vector3 newPosition, out Quaternion newRotation))
@@ -32,7 +33,9 @@ public class UnitMovement : MonoBehaviour
                 Destroy(gameObject);
                 return;
             }
-            
+
+            RotateBody(nextRotation);
+
             nextPosition = newPosition;
             nextRotation = newRotation;
         }
@@ -41,11 +44,21 @@ public class UnitMovement : MonoBehaviour
         characterController.Move(direction);
     }
 
-    public void InitalizeUnit(WaveManager waveManager, Vector3 nextPosition, Quaternion nextRotation)
+    public void InitalizeUnit(WaveManager waveManager, Vector3 nextPosition, Quaternion nextRotation, Quaternion spawnRotation)
     {
         this.waveManager = waveManager;
         this.nextPosition = nextPosition;
         this.nextRotation = nextRotation;
+
+        RotateBody(spawnRotation);
+    }
+
+    private void RotateBody(Quaternion rotation)
+    {
+        foreach (GameObject obj in body)
+        {
+            obj.transform.rotation = rotation;
+        }
     }
 
 }

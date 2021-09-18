@@ -599,6 +599,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toleranceDistance: 0.1
+  body:
+  - {fileID: 2606233317054231527}
 --- !u!114 &4984160704212188816
 MonoBehaviour:
   m_ObjectHideFlags: 0

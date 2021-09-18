@@ -38,8 +38,8 @@ public class WaveManager : MonoBehaviour
 
     private void SpawnUnit(GameObject unitType)
     {
-        GameObject unit = Instantiate(unitType, spawn.position, spawn.rotation);
-        unit.GetComponent<UnitMovement>().InitalizeUnit(this, waypoints[0].position, waypoints[0].rotation);
+        GameObject unit = Instantiate(unitType, spawn.position, Quaternion.identity);
+        unit.GetComponent<UnitMovement>().InitalizeUnit(this, waypoints[0].position, waypoints[0].rotation, spawn.rotation);
         unitCount++;
     }
 
